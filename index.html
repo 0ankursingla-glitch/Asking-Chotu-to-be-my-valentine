@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <style>
+        /* CSS: Styling the vibe */
+        body {
+            background-color: #fce4ec; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+            position: relative;
+        }
+
+        .header-img {
+            width: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #4a4a4a;
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s;
+            font-weight: bold;
+        }
+
+        #yes-btn {
+            background-color: #ff4081;
+            color: white;
+        }
+
+        #no-btn {
+            background-color: #eeeeee;
+            color: #757575;
+            position: relative; 
+        }
+
+        #small-text {
+            font-size: 0.8rem;
+            color: #9e9e9e;
+            margin-top: 10px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .yay-img {
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div id="main-content">
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHp1NHp1NHp1NHp1NHp1NHp1NHp1NHp1NHp1NHp1NHp1NHp1NHp1JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1z/md8IyVm12pMelmU9Bv/giphy.gif" alt="Cute Animal" class="header-img">
+            
+            <h1 id="question-text">Chotu, will you be my valentine?</h1>
+
+            <div class="buttons" id="btn-container">
+                <button id="yes-btn">Yes</button>
+                <button id="no-btn">No</button>
+            </div>
+
+            <p id="small-text">"No" seems a bit shy 🫣</p>
+        </div>
+
+        <div id="success-content" class="hidden">
+            <h1 id="yay-text">YAY! 🎉</h1>
+            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmc1amN4Y29iaW9xYm5yZ3YyeXp6eXp6eXp6eXp6eXp6eXp6eXp6ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0ExhcOSvfMVEiLni/giphy.gif" alt="Celebration" class="yay-img">
+        </div>
+    </div>
+
+    <script>
+        const noBtn = document.getElementById('no-btn');
+        const yesBtn = document.getElementById('yes-btn');
+        const mainContent = document.getElementById('main-content');
+        const successContent = document.getElementById('success-content');
+
+        noBtn.addEventListener('mouseover', () => {
+            const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
+            const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
+
+            noBtn.style.position = 'fixed';
+            noBtn.style.left = `${x}px`;
+            noBtn.style.top = `${y}px`;
+        });
+
+        yesBtn.addEventListener('click', () => {
+            mainContent.classList.add('hidden');
+            successContent.classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>
