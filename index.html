@@ -3,74 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Will You Be My Valentine?</title>
+    <title>For Chotu</title>
     <style>
-        /* CSS: Styling the vibe */
+        /* CSS: Setting the romantic vibe */
         body {
-            background-color: #fce4ec; 
+            background-color: #fff0f3; /* Light blush pink */
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Comic Sans MS', 'Segoe UI', cursive, sans-serif;
+            overflow: hidden; /* Prevents scrolling if button moves off-screen */
         }
 
         .card {
             background: white;
-            padding: 30px;
-            border-radius: 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            padding: 40px 20px;
+            border-radius: 30px;
+            box-shadow: 0 15px 35px rgba(255, 75, 110, 0.2);
             text-align: center;
-            max-width: 400px;
-            width: 90%;
-            position: relative;
+            max-width: 350px;
+            width: 85%;
+            border: 2px solid #ffb3c1;
         }
 
         .header-img {
-            width: 150px;
-            border-radius: 50%;
-            margin-bottom: 20px;
+            width: 180px;
+            height: auto;
+            border-radius: 20px;
+            margin-bottom: 25px;
         }
 
         h1 {
-            color: #4a4a4a;
-            font-size: 1.5rem;
-            margin-bottom: 30px;
+            color: #d90429;
+            font-size: 1.6rem;
+            margin-bottom: 35px;
+            line-height: 1.4;
         }
 
         .buttons {
             display: flex;
             justify-content: center;
-            gap: 20px;
-            margin-bottom: 20px;
+            gap: 25px;
+            margin-bottom: 15px;
         }
 
         button {
-            padding: 12px 25px;
-            font-size: 1rem;
+            padding: 15px 30px;
+            font-size: 1.1rem;
             border: none;
-            border-radius: 10px;
+            border-radius: 15px;
             cursor: pointer;
-            transition: transform 0.2s;
             font-weight: bold;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
 
         #yes-btn {
-            background-color: #ff4081;
+            background-color: #ff4d6d;
             color: white;
         }
 
         #no-btn {
-            background-color: #eeeeee;
-            color: #757575;
-            position: relative; 
-        }
-
-        #small-text {
-            font-size: 0.8rem;
-            color: #9e9e9e;
-            margin-top: 10px;
+            background-color: #f8f9fa;
+            color: #5c5c5c;
+            position: relative;
         }
 
         .hidden {
@@ -79,7 +77,13 @@
 
         .yay-img {
             width: 100%;
-            border-radius: 10px;
+            border-radius: 15px;
+            margin-top: 20px;
+        }
+
+        #small-text {
+            color: #ffb3c1;
+            font-size: 0.8rem;
             margin-top: 15px;
         }
     </style>
@@ -88,21 +92,21 @@
 
     <div class="card">
         <div id="main-content">
-            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHp1NHp1NHp1NHp1NHp1NHp1NHp1NHp1NHp1NHp1NHp1NHp1NHp1JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1z/md8IyVm12pMelmU9Bv/giphy.gif" alt="Cute Animal" class="header-img">
+            <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExZ3ZueXp3bm9ueXp3bm9ueXp3bm9ueXp3bm9ueXp3bm9ueXp3JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/qUIm586Mm59ny/giphy.gif" alt="Cute Cat" class="header-img">
             
-            <h1 id="question-text">Chotu, will you be my valentine?</h1>
+            <h1>Chotu, will you be my valentine?</h1>
 
-            <div class="buttons" id="btn-container">
+            <div class="buttons">
                 <button id="yes-btn">Yes</button>
                 <button id="no-btn">No</button>
             </div>
-
-            <p id="small-text">"No" seems a bit shy 🫣</p>
+            <p id="small-text">Hint: Try to tap No if you can! 😉</p>
         </div>
 
         <div id="success-content" class="hidden">
-            <h1 id="yay-text">YAY! 🎉</h1>
-            <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmc1amN4Y29iaW9xYm5yZ3YyeXp6eXp6eXp6eXp6eXp6eXp6eXp6ZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0ExhcOSvfMVEiLni/giphy.gif" alt="Celebration" class="yay-img">
+            <h1 style="font-size: 2.2rem;">YAY! 🎉</h1>
+            <p style="color: #d90429;">See you on the 14th! ❤️</p>
+            <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExOHh6N3h6N3h6N3h6N3h6N3h6N3h6N3h6N3h6N3h6N3h6JmVwPXYxX2ludGVybmFsX2dpZl9ieV9pZCZjdD1n/5Govl09URRL6E/giphy.gif" alt="Yay GIF" class="yay-img">
         </div>
     </div>
 
@@ -112,15 +116,26 @@
         const mainContent = document.getElementById('main-content');
         const successContent = document.getElementById('success-content');
 
-        noBtn.addEventListener('mouseover', () => {
+        // Function to move the 'No' button randomly
+        function moveButton() {
+            // Calculate random positions
             const x = Math.random() * (window.innerWidth - noBtn.offsetWidth);
             const y = Math.random() * (window.innerHeight - noBtn.offsetHeight);
 
+            // Change style to fixed and move it
             noBtn.style.position = 'fixed';
             noBtn.style.left = `${x}px`;
             noBtn.style.top = `${y}px`;
+        }
+
+        // Moves on hover (for PC) and touch (for Chotu's iPhone)
+        noBtn.addEventListener('mouseover', moveButton);
+        noBtn.addEventListener('touchstart', (e) => {
+            e.preventDefault(); // Prevents the actual "click" from happening on phones
+            moveButton();
         });
 
+        // Show success screen
         yesBtn.addEventListener('click', () => {
             mainContent.classList.add('hidden');
             successContent.classList.remove('hidden');
